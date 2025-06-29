@@ -1,0 +1,46 @@
+\begin{renshu}
+  複素数列$\{w_{n}\}_{n=1}^{\infty}$が収束するとは、ある$w\in\mathbb{C}$が存在し、
+\begin{align}
+    \lim_{n\to\infty}|w_{n}-w|=0
+\end{align}
+をみたすことであり、$w$をこの数列の極限という。
+\begin{enumerate}
+\item 複素数列が収束するとき、その極限は一意的に定まることを示せ。
+
+複素数列$\{w_{n}\}_{n=1}^{\infty}$が\textbf{コーシー列}であるとは、
+任意の$\varepsilon>0$に対して、ある正の整数$N$で
+\begin{align}
+n,m>N\Rightarrow|w_{n}-w_{m}|<\varepsilon
+\end{align}
+を満たすようなものが存在することである。
+\item 複素数列が収束するのは、それがコーシー列のとき、かつそのときに限ることを証明せよ。
+
+複素数の級数$\sum_{n=1}^{\infty}z_{n}$が収束するとは、その部分和
+\begin{align}
+S_{N}=\sum_{n=1}^{N}z_{n}
+\end{align}
+が収束することである。$\{a_{n}\}_{n=1}^{\infty}$を非負の実数列で$\sum_{n=1}^{\infty}a_{n}$が収束するものとする。
+\item $\{z_{n}\}_{n=1}^{\infty}$が複素数列で、すべての$n$に対して$|z_{n}|\leq a_{n}$をみたしているとする。
+このとき$\{z_{n}\}_{n=1}^{\infty}$が収束することを示せ。
+\end{enumerate}
+\end{renshu}
+
+\begin{kaitou*}
+\begin{enumerate}
+\item $\{w_{n}\}_{n=1}^{\infty}$が収束し、その極限が$w_{1},w_{2}$とする。
+定義より$k=1,2$それぞれについて、
+任意の$\varepsilon>0$に対してある$N_{k}\in\mathbb{N}$が存在し、$n>N_{k}$ならば
+$|w_{n}-w_{k}|<\varepsilon$となる。
+これより、任意の$\varepsilon>0$に対して$N=\max\{N_{1},N_{2}\}$とおくと、
+$n>N$ならば$|w_{1}-w_{2}|<2\varepsilon$となる。
+よって$|w_{1}-w_{2}|=0$であり、$w_{1}=w_{2}$が示された。
+\item はじめに複素数列$\{w_{n}\}_{n=1}^{\infty}$が収束列のときにCauchy列であることを示す。
+$\{w_{n}\}_{n=1}^{\infty}$の極限を$w$とおくと、定義から
+任意の$\varepsilon>0$に対してある$N\in\mathbb{N}$が存在して、
+$n>N$ならば$|w_{n}-w|<\varepsilon$となる。
+このとき、$m>N$なる$m$についても$|w_{m}-w|<\varepsilon$となる。
+よって、$n,m>N$ならば$|w_{n}-w_{m}|<2\varepsilon$となるのでCauchy列となる。
+
+次に複素数列$\{w_{n}\}_{n=1}^{\infty}$がCauchy列のときに収束列であることを示す。
+\end{enumerate}
+\end{kaitou*}

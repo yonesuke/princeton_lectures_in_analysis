@@ -21,7 +21,7 @@ S_{N}=\sum_{n=1}^{N}z_{n}
 \end{align}
 が収束することである。$\{a_{n}\}_{n=1}^{\infty}$を非負の実数列で$\sum_{n=1}^{\infty}a_{n}$が収束するものとする。
 \item $\{z_{n}\}_{n=1}^{\infty}$が複素数列で、すべての$n$に対して$|z_{n}|\leq a_{n}$をみたしているとする。
-このとき$\{z_{n}\}_{n=1}^{\infty}$が収束することを示せ。
+このとき$\sum_{n=1}^{\infty}z_{n}$が収束することを示せ。
 \end{enumerate}
 \end{renshu}
 
@@ -42,5 +42,11 @@ $n>N$ならば$|w_{n}-w|<\varepsilon$となる。
 よって、$n,m>N$ならば$|w_{n}-w_{m}|<2\varepsilon$となるのでCauchy列となる。
 
 次に複素数列$\{w_{n}\}_{n=1}^{\infty}$がCauchy列のときに収束列であることを示す。
+はじめに$\{w_{n}\}_{n=1}^{\infty}$が有界であることを示す。
+任意の$\varepsilon>0$に対して、ある正の整数$N$が存在し、$n\ge N$であれば$|w_n-w_N|<\varepsilon$が成り立つ。これより、$|w_n|<\varepsilon + |w_N|$である。
+よって、$M=\max\left\{|w_1|,\dots,|w_{N-1}|,\varepsilon + |w_N|\right\}$とおくと、任意の正の整数$n$で$|w_n|<M$がわかる。これは$\{w_{n}\}_{n=1}^{\infty}$が有界であることに他ならない。
+ボルツァノ・ワイエルシュトラスの定理より有界な列には収束する部分列$\{w_{n_{k}}\}_{k=1}^{\infty}$が存在する。$\lim_{k\to\infty}w_{n_{k}}=w$とおくと、任意の$\varepsilon>0$に対してある正の整数$K$が存在して、$k\ge K$ならば$|w_{n_{k}}-w|<\varepsilon$とかける。これとCauchy列の条件をそろえると、$n\ge\max\{N,n_{K}\}$であれば$|w_{n}-w|\le|w_{n}-w_{n_{K}}|+|w_{n_{K}}-w|<2\varepsilon$となる。これにより$\{w_{n}\}_{n=1}^{\infty}$が収束列であることが示された。
+
+\item $\{\sum_{k=1}^{n}a_k\}_{k}$は収束するのでCauchy列である。よって、任意の$\varepsilon>0$に対して、ある正の整数$N$が存在して、$n\ge m>N$ならば$\sum_{k=m+1}^{n}a_k<\varepsilon$となる。このとき、$|S_{n}-S_{m}|=|\sum_{k=m+1}^{n}z_{k}|<\sum_{k=m+1}^{n}a_k<\varepsilon$が得られる。よって、$S_{n}$はCauchy列であるので、収束することが示された。
 \end{enumerate}
 \end{kaitou*}

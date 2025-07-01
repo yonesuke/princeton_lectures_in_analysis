@@ -52,3 +52,24 @@ r=|z|,\quad\theta=\arctan(y/x)
 を示せ。この計算はダランベールによる進行波を用いた解と定常波の重ね合わせによる解を結びつけるものである。
 \end{enumerate}
 \end{renshu}
+
+\begin{kaitou*}
+\begin{enumerate}
+\item $S_{n}=\sum_{k=0}^{n}z^{k}/k!$として、$S_{n}$がCauchy列であることを示す。
+任意の$z\in\mathbb{C}$はある$M>0$によって$|z|<M$と抑えられる。
+任意の$\varepsilon>0$に対して正の整数$N$を$\varepsilon>1/2^N$かつ$N!>(2M)^{N}$\footnote{一般に$a>0$ならば$\lim_{n\to\infty}a^n/n!=0$である。}が成り立つようなものとして取る。このとき$n\geq m > N$であれば$|S_n-S_m|<\sum_{k=m+1}^{n}M^{k}/k!<1/2^{N}<\varepsilon$となり、Cauchy列であることが示された。
+
+次に$e^z$が有界閉集合$S\subset\mathbb{C}$上で一様収束することを示す。$S$は有界であるからある$M>0$が存在して、任意の$z\in S$において$|z|<M$である。$z=M$においても$e^{M}$は収束するので、任意の$\varepsilon>0$に対して正の整数$N$が存在して、$n>N$であれば$\sum_{k=n+1}^{\infty}M^{k}/k!<\varepsilon$である。このとき、任意の$z\in S$において、$n>N$において$|\sum_{k=n+1}^{\infty}z^{k}/k!|<\sum_{k=n+1}^{\infty}|z|^{k}/k!<\sum_{k=n+1}^{\infty}M^{k}/k!<\varepsilon$がわかる。よって$S$上でこの収束は一様収束であることが示された。
+
+\item $e^{z_1}e^{z_2}=\sum_{m=0}^{\infty}z_1^{m}/m!\sum_{n=0}^{\infty}z_2^{n}/n!=\sum_{m,n=0}^{\infty}z_1^m z_2^n/(m!n!)$において、$m+n=k$となる項をまとめると、$\sum_{k=0}^{\infty}1/k!\sum_{n=0}^{k}\binom{k}{n}z_1^{k-n}z_2^n=\sum_{k=0}^{\infty}(z_1+z_2)^k/k!=e^{z_1+z_2}$となる。よって$e^{z_1}e^{z_2}=e^{z_1+z_2}$である。これらの操作は$e^{z}$が絶対収束することから正当化される。
+
+\item $e^{iy}=\sum_{n=0}^{\infty}i^n y^n/n!=(1-y^2/2!+y^4/4!-\cdots)+i(y/1!-y^3/3!+y^5/5!-\cdots)=\cos y+i\sin y$である。これらの操作についても$e^{z}$が絶対収束することから正当化される。
+
+\item $e^{x+iy}=e^{x}e^{iy}=e^{x}(\cos y+i\sin y)$である。また、$|e^{x+iy}|=|e^{x}||\cos y+i\sin y|$において、$e^{x}>0$と$|\cos y+i\sin y|=\cos^{2}y+\sin^{2}y=1$より、$|e^{x+iy}|=e^{x}$である。
+
+\item $1=e^{z}=e^{x}\cos y+i e^{x}\sin y$の虚部に注目すると$\sin y=0$、すなわち$y=\pi k, k\in\mathbb{Z}$が必要。このとき、$1=(\pm 1)^k e^x$となる。$e^{x}>0$より、$k$は偶数かつ$x=0$となる。よって、$k\in\mathbb{Z}$として$z=2\pi ki$が得られる。
+
+\item 
+
+\end{enumerate}
+\end{kaitou*}

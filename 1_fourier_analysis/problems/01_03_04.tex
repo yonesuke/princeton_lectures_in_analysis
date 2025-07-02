@@ -69,7 +69,27 @@ r=|z|,\quad\theta=\arctan(y/x)
 
 \item $1=e^{z}=e^{x}\cos y+i e^{x}\sin y$の虚部に注目すると$\sin y=0$、すなわち$y=\pi k, k\in\mathbb{Z}$が必要。このとき、$1=(\pm 1)^k e^x$となる。$e^{x}>0$より、$k$は偶数かつ$x=0$となる。よって、$k\in\mathbb{Z}$として$z=2\pi ki$が得られる。
 
-\item 
+\item $z=0$のときは$r=0$とすれば$z=re^{i\theta}$で表現できる。$z\neq 0$のときは、$r=|z|=\sqrt{x^2+y^2}$とすると、$z=r(x/r+iy/r)$である。このとき$\cos\theta=x/r,\sin\theta=y/r$なる$\theta$が$2\pi$の整数倍の違いを除いて一意的に定まる。また、$x\neq 0$であれば$\tan\theta=y/x$より$\theta=\arctan(y/x)$が成り立つ。まとめると$z=r(\cos\theta+i\sin\theta)=re^{i\theta}$となる。よって、任意の$z\in\mathbb{C}$は$z=re^{i\theta}$の形で表現できることが示された。
 
+\item 複素数$z=re^{i\vartheta}$に$e^{i\theta}$を掛けると$re^{i(\vartheta+\theta)}$となり、これは複素平面上の偏角が$\vartheta$から$\vartheta+\theta$に移ったことに対応する。すなわち、複素数に$e^{i\theta}$を掛けることは複素平面上で反時計周りに角度$\theta$だけ回転させることに対応する。特に$i=e^{i\pi/2}$を掛けることは反時計周りに90度回転させることに対応する。
+
+\item $e^{i\theta}=\cos\theta+i\sin\theta$と$e^{-i\theta}=\cos\theta-i\sin\theta$を$\cos\theta,\sin\theta$について解くことで、$\cos\theta=(e^{i\theta}+e^{-i\theta})/2,\sin\theta=(e^{i\theta}-e^{-i\theta})/2i$が得られる。
+
+\item $e^{i(\theta+\vartheta)}=\cos(\theta+\vartheta)+i\sin(\theta+\vartheta)$と$e^{i\theta}e^{i\vartheta}=(\cos\theta+i\sin\theta)(\cos\vartheta+i\sin\vartheta)=(\cos\theta\cos\vartheta-\sin\theta\sin\vartheta)+i(\cos\theta\sin\vartheta+\sin\theta\cos\vartheta)$の実部と虚部をそれぞれ比較することで、
+\begin{align*}
+&\cos(\theta+\vartheta)=\cos\theta\cos\vartheta-\sin\theta\sin\vartheta, \\
+&\sin(\theta+\vartheta)=\cos\theta\sin\vartheta+\sin\theta\cos\vartheta  
+\end{align*}
+が得られる。また、$\vartheta\leftarrow -\vartheta$を代入することで、
+\begin{align*}
+&\cos(\theta-\vartheta)=\cos\theta\cos\vartheta+\sin\theta\sin\vartheta, \\
+&\sin(\theta-\vartheta)=-\cos\theta\sin\vartheta+\sin\theta\cos\vartheta  
+\end{align*}
+が得られる。これらから、
+\begin{align*}
+&2\sin\theta\sin\vartheta=\cos(\theta-\vartheta)-\cos(\theta+\vartheta), \\
+&2\sin\theta\cos\vartheta=\sin(\theta+\vartheta)+\sin(\theta-\vartheta)
+\end{align*}
+もわかる。
 \end{enumerate}
 \end{kaitou*}

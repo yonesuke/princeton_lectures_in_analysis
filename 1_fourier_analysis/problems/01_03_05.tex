@@ -1,0 +1,47 @@
+\begin{renshu}
+整数 $n$ に対して $f(x) = e^{inx}$ が周期 $2\pi$ の周期関数であることと
+\begin{align}
+\frac{1}{2\pi} \int_{-\pi}^{\pi} e^{inx} dx = \left\{
+\begin{array}{ll}
+1, & n=0 \\
+0, & n \ne 0
+\end{array}
+\right.
+\end{align}
+を証明せよ。
+このことを用いて、整数 $n, m \ge 1$ に対して
+\begin{align}
+\frac{1}{\pi}\int_{-\pi}^{\pi} \cos nx \cos mx dx = \left\{
+\begin{array}{ll}
+0, & n \ne m \\
+1, & n = m
+\end{array}
+\right.
+\end{align}
+を示せ。同様にして
+\begin{align}
+\frac{1}{\pi} \int_{-\pi}^{\pi} \sin nx \sin mx dx = \left\{
+\begin{array}{ll}
+0, & n \ne m \\
+1, & n = m
+\end{array}
+\right.
+\end{align}
+を示せ。最後に任意の $n, m$ に対して
+\begin{align}
+\int_{-\pi}^{\pi} \sin nx \cos mx dx = 0
+\end{align}
+を示せ。
+\end{renshu}
+
+\begin{kaitou*}
+$f(x+2\pi)=e^{in(x+2\pi)}=e^{inx}e^{2\pi ni}=e^{inx}=f(x)$より$f$は周期$2\pi$の周期関数である。
+$n=0$のとき$\int_{-\pi}^{\pi} e^{inx} dx=\int_{-\pi}^{\pi}dx=2\pi$であり、$n\neq 0$のとき$\int_{-\pi}^{\pi} e^{inx} dx=\int_{-\pi}^{\pi} \cos nx dx+i\int_{-\pi}^{\pi} \sin nx dx=(1/n)[\sin nx - i \cos nx]_{-\pi}^{\pi}=0$である。よって、$1/(2\pi)\int_{-\pi}^{\pi}e^{inx} dx=\delta_{n, 0}$が示された。
+
+$\cos nx \cos mx=1/2\mathrm{Re}(e^{i(n+m)x}+e^{i(n-m)x})$より$\int_{-\pi}^{\pi}\cos nx \cos mx dx=1/2\mathrm{Re}(2\pi\delta_{n+m,0}+2\pi\delta_{n-m,0})=\pi\delta_{n,m}$が示される。
+
+$\sin nx \sin mx=1/2\mathrm{Re}(e^{i(n-m)x}-e^{i(n+m)x})$より$\int_{-\pi}^{\pi}\sin nx \sin mx dx=1/2\mathrm{Re}(2\pi\delta_{n-m,0}-2\pi\delta_{n+m,0})=\pi\delta_{n,m}$が示される。
+
+$\sin nx \cos mx=1/2\mathrm{Im}(e^{i(n+m)x}+e^{i(n-m)x})$より$\int_{-\pi}^{\pi}\sin nx \cos mx dx=1/2\mathrm{Im}(2\pi\delta_{n+m,0}+2\pi\delta_{n-m,0})=0$が示される。
+
+\end{kaitou*}

@@ -1,0 +1,18 @@
+\begin{renshu}
+$f$が$\mathbb{R}$上で2回連続微分可能で、かつ方程式
+\begin{align}
+f''(t)+c^2 f(t)=0
+\end{align}
+の解であれば、ある定数$a,b$が存在し、
+\begin{align}
+f(t)=a\cos ct + b\sin ct
+\end{align}
+となっていることを証明せよ。
+これは二つの関数$g(t)=f(t)\cos ct - c^{-1}f'(t)\sin ct$と$h(t)=f(t)\sin ct + c^{-1}f'(t)\cos ct$を微分することによって示すことが出来る。
+\end{renshu}
+
+\begin{kaitou*}
+$g'(t)=h'(t)=0$であるから、ある定数$a,b$が存在して$g(t)=a,h(t)=b$となる。
+$g(t)\cos ct+h(t)\sin ct$を計算することで$f(t)=a\cos ct+b\sin ct$を得る。
+$f'(t)=-ac\sin ct+bc\cos ct$となり、$g(t)=a,h(t)=b$を満たす。
+\end{kaitou*}

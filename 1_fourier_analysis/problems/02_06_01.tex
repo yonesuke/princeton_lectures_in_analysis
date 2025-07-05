@@ -1,0 +1,16 @@
+\begin{renshu}
+$f$は$\mathbb{R}$上の周期$2\pi$の関数で、任意の閉区間上で可積分とする。
+$a,b\in\mathbb{R}$のとき、次の二つの等式を示せ。
+\begin{align}
+&\int_{a}^{b}f(x)dx=\int_{a+2\pi}^{b+2\pi}f(x)dx=\int_{a-2\pi}^{b-2\pi}f(x)dx,\\
+&\int_{-\pi}^{\pi}f(x+a)dx=\int_{-\pi}^{\pi}f(x)dx=\int_{-\pi+a}^{\pi+a}f(x)dx
+\end{align}
+\end{renshu}
+
+\begin{kaitou*}
+$f(x)=f(x+2\pi)$であるから$\int_{a}^{b}f(x)dx=\int_{a}^{b}f(x+2\pi)dx=\int_{a+2\pi}^{b+2\pi}f(y)dy$となる。
+同様に$f(x)=f(x-2\pi)$から$\int_{a}^{b}f(x)dx=\int_{a-2\pi}^{b-2\pi}f(y)dy$となる。
+
+$\int_{-\pi}^{\pi}f(x+a)dx=\int_{-\pi+a}^{\pi+a}f(y)dy=-\int_{-\pi}^{-\pi+a}+\int_{-\pi}^{\pi}+\int_{\pi}^{\pi+a}f(y)dy$であり、上式から$\int_{-\pi}^{-\pi+a}f(y)dy=\int_{\pi}^{\pi+a}f(y)dy$であるから$\int_{-\pi}^{\pi}f(x+a)dx=\int_{-\pi+a}^{\pi+a}f(y)dy$となる。
+
+\end{kaitou*}

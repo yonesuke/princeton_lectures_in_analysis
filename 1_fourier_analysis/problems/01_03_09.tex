@@ -1,0 +1,28 @@
+\begin{renshu}
+摘み上げた弦の場合、フーリエ・サイン係数に対する公式を用いて
+\begin{align}
+A_m=\frac{2h}{m^{2}}\frac{\sin mp}{p(\pi - p)}
+\end{align}
+を示せ。$p$がどのような位置にあるとき、第2,4,...のハーモニクスは失われるか?
+また、$p$がどのような位置にあるとき、第3,6,...のハーモニクスは失われるか?
+\end{renshu}
+
+\begin{kaitou*}
+弦がはじめに次の三角形の形をしている状態を考える。
+\begin{align*}
+f(x)=\left\{
+\begin{array}{ll}
+\dfrac{xh}{p}, & 0\le x\le p,\\
+\dfrac{h(\pi-x)}{\pi-p}, & p\le x\le \pi
+\end{array}
+\right.
+\end{align*}
+これに対して、$A_{m}=(2/\pi)\int_{0}^{\pi}f(x)\sin mxdx$を計算する\footnote{$x\sin ax=[-(1/a)x\cos ax+(1/a^{2})\sin ax]'$}。
+\begin{align*}
+A_{m}=&\frac{2}{\pi}\frac{h}{p}\int_{0}^{p}x\sin mxdx+\frac{2}{\pi}\frac{h\pi}{\pi-p}\int_{p}^{\pi}\sin mxdx-\frac{2}{\pi}\frac{h}{\pi-p}\int_{p}^{\pi}x\sin mxdx\\
+=&\frac{2h}{\pi p}\left(-\frac{1}{m}p\cos mp+\frac{1}{m^2}\sin mp\right)
++\frac{2h}{\pi-p}\left(-\frac{1}{m}\cos m\pi+\frac{1}{m}\cos mp\right)\\
+&-\frac{2h}{\pi(\pi-p)}\left(-\frac{1}{m}\pi\cos m\pi+\frac{1}{m}p\cos mp-\frac{1}{m^2}\sin mp\right)\\
+=&\frac{2h}{m^{2}}\frac{\sin mp}{p(\pi - p)}
+\end{align*}
+\end{kaitou*}

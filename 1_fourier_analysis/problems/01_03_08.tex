@@ -1,0 +1,21 @@
+\begin{renshu}
+$F$を$(a,b)$上の関数で、2階の連続な導関数をもつものとする。$(a,b)$に属する$x$と$x+h$に対して、次を示せ。
+\begin{align}
+F(x+h)=F(x)+hF'(x)+\frac{h^2}{2}F''(x)+h^{2}\varphi(h),
+\end{align}
+ただし$h\to 0$のとき$\varphi(h)\to 0$をみたすものとする。
+
+次のことも導け。$h\to 0$のとき
+\begin{align}
+\frac{F(x+h)+F(x-h)-2F(x)}{h^{2}}\to F''(x).
+\end{align}
+\end{renshu}
+
+\begin{kaitou*}
+$F(x+h)-F(x)=\int_{x}^{x+h}F'(y)dy$にテイラーの定理$F'(y)=F'(x)+(y-x)F''(x)+(y-x)\psi(y-x)$を代入すると
+\begin{align}
+F(x+h)=&F(x)+\int_{x}^{x+h}F'(y)dy+\int_{x}^{x+h}(y-x)F''(x)dy+\int_{x}^{x+h}(y-x)\psi(y-x)dy\\
+=&F(x)+hF'(x)+\frac{h^2}{2}F''(x)+h^{2}\varphi(h)
+\end{align}
+\red{[なぜ?]}
+\end{kaitou*}
